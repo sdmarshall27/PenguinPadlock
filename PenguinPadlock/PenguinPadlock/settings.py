@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'PenguinPadlock.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'PenguinPadlock',
+        'USER': 'root',
+        'PASSWORD': 'Ysu2020!',
+        'HOST': 'penguin-padlock.c8xiql9k3hrg.us-east-2.rds.amazonaws.com',
+        'PORT' : '5432',
     }
 }
 
