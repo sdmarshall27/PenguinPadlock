@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Passowrd(models.Model):
-	name = models.CharField(max_length=50)
+class Password(models.Model):
+	description = models.CharField(max_length=250)
 	password = models.CharField(max_length=50)
-	owner = model.ForeignKey(User, on_delet=models.CASCADE)
+	owner = models.ForeignKey(User, on_delete=models.CASCADE)
