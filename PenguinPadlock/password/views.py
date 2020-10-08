@@ -1,22 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import PasswordTable
 
-posts = [
-	{
-		'author': 'Alexander',
-		'title': 'Post 1',
-		'content': 'My content'
-	},
-	{
-		'author': 'Dwight',
-		'title': 'Post 1',
-		'content': 'Beets'
-	}
-]
 
 def home(request):
 	context = {
-		'posts':posts
+		'PasswordTable': PasswordTable.objects.all()
 	}
 	return render(request, 'password/home.html', context)
 
