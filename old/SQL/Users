@@ -1,0 +1,84 @@
+CREATE TABLE User (
+	UserID int NOT NULL Auto_Increment,
+     FirstName varchar(255) NOT NULL,
+     LastName varchar(255) NOT NULL,
+     Email varchar(255) NOT NULL,
+     Password varchar(255) NOT NULL,
+     PRIMARY KEY (UserID)
+);
+
+CREATE TABLE Password (
+	PasswordID int NOT NULL Auto_Increment,
+     Description varchar(255) NOT NULL,
+     Password varchar(255) NOT NULL,
+     OwnerID int NOT NULL,
+     PRIMARY KEY (PasswordID),
+     FOREIGN KEY (OwnerID) References User(UserID)
+);
+
+select UserID from User
+
+drop table User
+
+CREATE TABLE User (
+	UserID int NOT NULL Auto_Increment,
+     FirstName varchar(255) NOT NULL,
+     LastName varchar(255) NOT NULL,
+     Email varchar(255) NOT NULL,
+     Password varchar(255) NOT NULL,
+     PRIMARY KEY (UserID)
+);
+
+insert into Password (Description, Password, OwnerID) values ('Treeflex', 'lWGWD1o7eD', 15);
+insert into Password (Description, Password, OwnerID) values ('Opela', 'XspG0MF', 14);
+insert into Password (Description, Password, OwnerID) values ('Vagram', 'hMwdPHck', 16);
+insert into Password (Description, Password, OwnerID) values ('Trippledex', 'nTNxGzUl5pw', 10);
+insert into Password (Description, Password, OwnerID) values ('Matsoft', '6ERPh8ofN', 11);
+insert into Password (Description, Password, OwnerID) values ('Wrapsafe', 'WurfoCnuN', 15);
+insert into Password (Description, Password, OwnerID) values ('Job', 'ZLzrlewRJv', 1);
+insert into Password (Description, Password, OwnerID) values ('Sonair', 'Zc2DFk', 4);
+insert into Password (Description, Password, OwnerID) values ('Stringtough', '3JzkFuD', 13);
+insert into Password (Description, Password, OwnerID) values ('It', 'XvsLy9Xzc', 9);
+insert into Password (Description, Password, OwnerID) values ('Duobam', 'mtjfCkN', 16);
+insert into Password (Description, Password, OwnerID) values ('Redhold', 'fstNlrmv17fF', 3);
+insert into Password (Description, Password, OwnerID) values ('Hatity', 'KQLjFI', 5);
+insert into Password (Description, Password, OwnerID) values ('Temp', 'ophU9srE2', 2);
+insert into Password (Description, Password, OwnerID) values ('Bitchip', 'MwcbER', 8);
+insert into Password (Description, Password, OwnerID) values ('Zoolab', 'I14XZk2', 9);
+insert into Password (Description, Password, OwnerID) values ('Lotlux', '5Uun84', 11);
+insert into Password (Description, Password, OwnerID) values ('Aerified', 'fcQ1843Rb4s', 11);
+insert into Password (Description, Password, OwnerID) values ('Fix San', 'z6rUfAn', 16);
+insert into Password (Description, Password, OwnerID) values ('Bitwolf', 'NVlEke', 8);
+insert into Password (Description, Password, OwnerID) values ('Greenlam', 'e5nPgvPHkIS', 9);
+insert into Password (Description, Password, OwnerID) values ('Redhold', 'QbptQUr', 3);
+insert into Password (Description, Password, OwnerID) values ('Pannier', 'zwf5c1', 8);
+
+insert into User (FirstName, LastName, Email, Password) values ('Kerrie', 'Labrom', 'klabrom0@addthis.com', SHA1('EONFyXgWcK'));
+insert into User (FirstName, LastName, Email, Password) values ('Elle', 'Verrechia', 'everrechia1@nyu.edu', SHA1('LSNJ0m5Djv'));
+insert into User (FirstName, LastName, Email, Password) values ('Wade', 'Muddimer', 'wmuddimer2@bizjournals.com', SHA1('cm2CEy9'));
+insert into User (FirstName, LastName, Email, Password) values ('Hamilton', 'Lacelett', 'hlacelett3@latimes.com', SHA1('pmVG9yle'));
+insert into User (FirstName, LastName, Email, Password) values ('Katinka', 'Tremblet', 'ktremblet4@google.co.uk', SHA1('bM1L2Z'));
+insert into User (FirstName, LastName, Email, Password) values ('Rockie', 'Fellnee', 'rfellnee5@tinypic.com', SHA1('Bgc8XUfD2N0'));
+insert into User (FirstName, LastName, Email, Password) values ('Shaina', 'Ionnisian', 'sionnisian6@sohu.com', SHA1('c2S2fEMOiB5p'));
+insert into User (FirstName, LastName, Email, Password) values ('Roddie', 'Thyng', 'rthyng7@intel.com', SHA1('7trsRMRn'));
+insert into User (FirstName, LastName, Email, Password) values ('Rowland', 'Boxen', 'rboxen8@fda.gov', SHA1('DTSB2ASb'));
+insert into User (FirstName, LastName, Email, Password) values ( 'Kirk', 'Tingly', 'ktingly9@de.vu', SHA1('tfB7jMqj2'));
+insert into User (FirstName, LastName, Email, Password) values ( 'Farris', 'MacSharry', 'fmacsharrya@seattletimes.com', SHA1('yumbH14RKNpo'));
+insert into User (FirstName, LastName, Email, Password) values ( 'Fayth', 'De Pero', 'fdeperob@wikia.com', SHA1('e55Vvpx'));
+insert into User (FirstName, LastName, Email, Password) values ( 'Ulises', 'Ballam', 'uballamc@cargocollective.com', SHA1('EC032kc'));
+insert into User (FirstName, LastName, Email, Password) values ( 'Leo', 'Briscoe', 'lbriscoed@mysql.com', SHA1('9p1xHpU'));
+insert into User (FirstName, LastName, Email, Password) values ( 'Ginger', 'Matuszak', 'gmatuszake@discovery.com', SHA1('jNmTNescS'));
+
+select * from User
+
+insert into User (FirstName, LastName, Email, Password) values ('Alexander', 'Smith', 'abc', SHA1('basketball'));
+
+
+
+CREATE TABLE Password( PasswordID int Not NULL Auto_Increment,
+Name varchar(55),
+Password varchar(55),
+OwnerID int Not Null,
+Primary Key (PasswordID),
+Foreign Key (OwnerID) References Users(ID)
+);

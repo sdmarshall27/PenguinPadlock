@@ -1,0 +1,21 @@
+{% extends "password/base.html" %}
+{% block content %}
+	<h1>List Page</h1>
+	<table class="table">
+		<th>Description</th>
+		<th>Password</th>
+		<th></th>
+		<tbody>
+			{% for password in PasswordTable %}
+				<tr>
+					<td>{{password.description}}</td>
+					<td>{{password.password}}</td>
+					<td align="center"><a href="{% url 'password-update' password.id %}">Edit</a> |
+					<a href="{% url 'password-delete' password.id %}">Delete</a></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+		
+	</table>
+	
+{% endblock content %}
