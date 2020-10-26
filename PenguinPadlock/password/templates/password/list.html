@@ -6,6 +6,7 @@
 		<th>Password</th>
 		<th></th>
 		<tbody>
+		<a class="nav-item nav-link" align="right" href="{% url 'password-new' %}">New Password</a>
 			{% for password in PasswordTable %}
 				<tr>
 					<td>{{password.description}}</td>
